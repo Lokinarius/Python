@@ -1,9 +1,9 @@
 print('\tMAIOR E MENOR')
 print('-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=')
-#inserção de dados
+# inserção de dados
 num1 = int(input('digite o primeiro número: '))
 num2 = int(input('digite o segundo número: '))
-#verificando qual é o maior e qual é o menor
+# verificando qual é o maior e qual é o menor
 if num1 == num2:
     print('Não existe valor maior, os dois são iguais')
 elif num1 > num2:

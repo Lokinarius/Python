@@ -12,7 +12,7 @@ passou = idade - 18
 if idade < 18:
     print(f'Você ainda tem {idade} anos, ainda faltam {falta} anos para que você possa se alistar!')
 elif idade > 18:
-    print(f'Você já possui {idade} anos, espero que já tenha servido, ou você está a {passou} anos em divida com o '
+    print(f'Você já possui {idade} anos, espero que já tenha servido, ou você está a {passou} anos em dívida com o '
           f'serviço militar obrigatório!')
 else:
     print(f'Você possui {idade}, dirija-se para o posto militar mais próximo para que possar se alistar!')
