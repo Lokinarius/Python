@@ -1,33 +1,26 @@
 import random
-print('JOKENPÔ')
+from time import sleep
+escolha = ['pedra', 'papel', 'tesoura']
+escolha_num = {1: 'pedra', 2: 'papel', 3: 'tesoura'}
+jogador = int(input('Escolha 1 para pedra, 2 para papel ou 3 para tesoura: '))
+jogador_nome = escolha_num[jogador]
 print('---------------------------------')
+sleep(1)
 print('O computador irá fazer uma jogada... ')
+sleep(1)
 print('--------------------------------')
-choices = ['pedra', 'papel', 'tesoura']
-computer_choice = random.choice(choices)
+sleep(1)
+print('JO-KEN-PÔ!')
+sleep(1)
+maquina_nome = random.choice(escolha)
 print('Sua vez!')
-player_choice = input('Escolha entre pedra, papel ou tesoura: ').lower()
-if player_choice == computer_choice:
-    print(f'O computador escolheu {computer_choice}')
+print(f'Você escolheu {jogador_nome}')
+print(f'O computador escolheu {maquina_nome}')
+if jogador_nome == maquina_nome:
     print('Empate!')
-elif player_choice == ['pedra']:
-    if computer_choice == ['tesoura']:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você ganhou!')
-    else:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você perdeu!')
-elif player_choice == ['tesoura']:
-    if computer_choice == ['papel']:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você ganhou!')
-    else:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você perdeu!')
-elif player_choice == ['papel']:
-    if computer_choice == ['pedra']:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você ganhou!')
-    else:
-        print(f'O computador escolheu {computer_choice}')
-        print('Você perdeu!')
+elif (jogador_nome == 'pedra' and maquina_nome == 'tesoura') or \
+     (jogador_nome == 'tesoura' and maquina_nome == 'papel') or \
+     (jogador_nome == 'papel' and maquina_nome == 'pedra'):
+    print('Você ganhou!')
+else:
+    print('Você perdeu!')

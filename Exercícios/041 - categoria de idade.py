@@ -1,7 +1,7 @@
-from datetime import datetime
+from datetime import date
 print('CATEGORIAS DE IDADE')
 ano = int(input('Em que ano o atleta nasceu? '))
-ano_atual = datetime.now().year
+ano_atual: int = date.today().year
 idade = ano_atual - ano
 if idade < 8:
     print('Categoria MIRIM')
