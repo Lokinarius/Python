@@ -3,7 +3,9 @@ print('\t\tMAIOR E MENOR SEQUÊNCIA')
 print('--------------------------------')
 
 # entrada de dados
-for c in range(1,6):
+maior = 0
+menor = 0
+for c in range(1, 6):
     peso = float(input(f'Qual o peso da {c}ª pessoa: '))
     if c == 1:
         maior = peso

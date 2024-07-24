@@ -11,15 +11,16 @@ mulher_20 = 0
 
 # Entrada de dados
 for c in range(1,5):
+    print(f'\n------ {c}ª Pessoa ------')
     nome = str(input(f'Nome da {c}ª pessoa: '))
     idade = int(input(f'Idade da {c}ª pessoa: '))
     soma_idade += idade
-    sexo = input(f'Sexo da {c}ª pessoa(M/F): ').upper()
+    sexo = str(input(f'Sexo da {c}ª pessoa(M/F): ')).strip()
+
     if sexo == 'm':
-        if c == 1:
+        if idade > homem_velho:
             homem_velho = idade
-            if homem_velho > idade:
-                homem_velho_nome = nome
+            homem_velho_nome = nome
     elif sexo == 'f':
         if idade < 20:
             mulher_20 += 1
@@ -28,7 +29,6 @@ media_idade = soma_idade/4
 
 #Resultados
 print('---------------------------------')
-print(f'A média de idade do grupo é {media_idade}')
+print(f'A média de idade do grupo é {media_idade:.2f}')
 print(f'O nome do homem mais velho é {homem_velho_nome}')
-print(f'Existem {mulher_20} abaixo dos 20 anos')
-
+print(f'Existem {mulher_20} mulheres abaixo dos 20 anos')
