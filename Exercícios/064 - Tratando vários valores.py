@@ -9,7 +9,7 @@ n = 0
 # Entrada de dados
 while True:
     print('\n================================')
-    num = float(input('Informe um número (ou 999 para sair): '))
+    num = int(input('Informe um número (ou 999 para sair): '))
     if num == 999:
         break
     soma += num
