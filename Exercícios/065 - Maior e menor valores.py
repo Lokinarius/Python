@@ -3,10 +3,11 @@ print('================================')
 print('\t\tVALORES')
 print('================================')
 
-# Variavés
+# Variáveis
 soma = 0
 n = 0
-media = 0
+menor = 0
+maior = 0
 
 # Entrada de dados
 while True:
