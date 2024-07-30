@@ -12,19 +12,26 @@ while True:
         print('O número de termos deve ser maior que zero')
         break
 
-    # Cálculo do último termo
+    # Variaveis
     an = a1 + (n - 1) * r
+    atual = a1
+    total = 0
 
     # Exibição dos termos
-    print('\nProgressão aritmética: ')
     while True:
-        print(f'{a1},', end=' ')
-        a1 += r
-        if a1 > an:
-            break
+        print('\nProgressão aritmética: ')
+        for c in range(n):
+            print(f'{atual},', end=' ')
+            atual += r
+            total += 1
+        print('\npausa')
 
-    # Sair do loop
-    continuar = input('\nDeseja gerar outra progressão? (s/n) ').strip().lower()
-    if continuar == 'n':
-        print('Programa encerrado.')
-        break
+        mais = int(input('Quantos termos você deseja adicionar? '))
+        if mais <= 0:
+            print('FIM')
+            break
+        else:
+            n = mais
+    break
+print(f'Progressão finalizada com {total} de termos mostrados.')
+
