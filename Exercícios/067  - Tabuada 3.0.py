@@ -7,7 +7,7 @@ while True:
     num = int(input('Digite um número: '))
     if num <= 0:
         if num == 0:
-            print('O Número 0 digitado, o programa será encerrado...')
+            print('O Número 0 foi digitado, o programa será encerrado...')
         else:
             print('Um Número negativo foi digitado, o programa será encerrado...')
         break
