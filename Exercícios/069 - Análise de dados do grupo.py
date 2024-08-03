@@ -1,6 +1,5 @@
 # Cabeçalho
 print('\t\tANÁLISE DE DADOS')
-print('---------------------------------')
 
 # Variaveis
 n = 0
@@ -23,22 +22,27 @@ while True:
             maior += 1
 
     # Sexo
-    sexo = input(f'Informe o sexo da {n}ª pessoa: ').strip().upper()
-    if sexo != 'M' and sexo != 'F':
-        print('Sexo inválido! Informe M para masculino ou F para feminino.')
-        continue
-    elif sexo == 'M':
-        homem += 1
-    elif sexo == 'F':
-        if idade <= 20:
-            mulher_20 += 1
+    while True:
+        sexo = input(f'Informe o sexo da {n}ª pessoa: ').strip().upper()
+        if sexo != 'M' and sexo != 'F':
+            print('Sexo inválido! Informe M para masculino ou F para feminino.')
+            continue
+        elif sexo == 'M':
+            homem += 1
+            break
+        elif sexo == 'F':
+            if idade <= 20:
+                mulher_20 += 1
+            break
 
     # Continuar
-    cont = input('Deseja continuar? ').strip().upper()
-    if cont not in ['S', 'N']:
-        print('Opção inválida! Informe "S" para sim ou "N" para não')
-        continue
-    elif cont == 'N':
+    while True:
+        cont = input('Deseja continuar? ').strip().upper()
+        if cont not in ['S', 'N']:
+            print('Opção inválida! Informe "S" para sim ou "N" para não')
+        else:
+            break
+    if cont == 'N':
         break
 
 # Resultados

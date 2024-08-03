@@ -7,8 +7,7 @@ n = 0
 soma = 0.0
 total = 0.0
 mais_1000 = 0
-# float('inf') representa um valor infinito possivel
-mais_barato = float('inf')
+mais_barato = 0
 nome_mais_barato = ''
 
 # Entrada de dados
@@ -20,9 +19,13 @@ while True:
     total += preco
     if preco > 1000:
         mais_1000 += 1
-    if preco < mais_barato:
+    if n == 1:
         mais_barato = preco
         nome_mais_barato = nome
+    else:
+        if preco < mais_barato:
+            mais_barato = preco
+            nome_mais_barato = nome
     while True:
         continuar = input('Deseja adicionar outro produto? ').strip().upper()
         if continuar in ['S', 'N']:
