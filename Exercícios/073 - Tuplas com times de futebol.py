@@ -11,9 +11,6 @@ times = (
 )
 
 # Saída de dados
-print('Times classificados para libertadores: ')
-print(times[0:6])
-print('Times na zona de Rebaixamento: ')
-print(tuple(reversed(times[-4:]))) # times([17:21])
-print('Times em ordem alfabética')
-print(sorted(times))
+print(f'Times classificados para libertadores:\n {times[0:6]}')
+print(f'Times na zona de Rebaixamento:\n {times[-4:]} ')
+print(f'Times em ordem alfabética:\n {sorted(times)}')
