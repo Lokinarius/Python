@@ -9,8 +9,8 @@ menor = 0
 
 # Entrada de dados
 for i in range (5):
-    valor = int(input(f'Digite o {i}ª valor : '))
-    lista.append(valor) # adiociona valor a cada elemento da lista
+    valor = int(input(f'Digite o {i+1}ª valor : '))
+    lista.append(valor) # adiciona valor a cada elemento da lista
     if i == 0:
         maior = valor
         menor = valor
@@ -20,7 +20,7 @@ for i in range (5):
         if valor < menor:
             menor = valor
 
-# Saída de daddos
+# Saída de dados
 print('-=' * 10)
 print(f'Você digitou os valores {lista}')
 # Posições para maior e menor
