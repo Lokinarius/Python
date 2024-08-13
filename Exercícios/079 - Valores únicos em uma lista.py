@@ -13,13 +13,13 @@ while True:
         print('Valor adicionado com sucesso...')
     continua = input('Deseja continuar? ').strip().upper()
     while continua not in ['S', 'N']:
-        print('Valor invalido! Digite S para continuar ou N para parar')
+        print('Opção inválida! Digite S para continuar ou N para parar')
         continua = input('Deseja continuar? ').strip().upper()
     if continua == 'N':
         break
 # Apresentando os valores em ordem crescente
-lista_ordenada = lista.sort()
+lista.sort()
 
 # Saída de dados
 print('-' * 20)
-print(f'Você digitou os valores {lista_ordenada}')
+print(f'Você digitou os valores {lista}')
