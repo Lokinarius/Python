@@ -7,18 +7,21 @@ print('\t\tMEGA SENA')
 print('---------------------------------')
 
 # Variaveis
-jogo = list()
+jogos = []
+
 # Entrada de dados
-jogos = int(input('Quantos jogos você quer que eu sorteie? '))
-for i in range(jogos):
+jogadas = int(input('Quantos jogos você quer que eu sorteie? '))
+
+for n in range(jogadas):
+    jogo = []
     jogo.clear()
-    for n in range(6):
+    while len(jogo) < 6:
         num = randint(1, 60)
-        while num in jogo:
-            num = randint(1, 60)
-        jogo.append(num)
+        if num not in jogo:
+            jogo.append(num)
+            jogo.sort()
+    jogos.append(jogo)
 
 # Saída de dados
-print(f'-=-=-= SOTEANDO {jogos} JOGOS -=-=-=')
-for j in range(jogos):
-    print(f'Jogo {jogos}: {jogo}')
+for j in range(jogadas):
+    print(f'Jogo {j+1}: {jogos[j]}')
