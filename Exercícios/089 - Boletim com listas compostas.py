@@ -2,42 +2,49 @@
 print('\t\tBOLETIM DE NOTAS')
 print('-------------------------------------')
 
-# Variaveis
-aluno = list()
-alunos = list()
-alunos.append(aluno[:])
+# Variáveis
+alunos = []
 
 # Entrada de dados
 while True:
     print('\n================================')
-    nome = (str(input('Nome do aluno: ')))
-    alunos.append(nome)
-    n1 = float(input(f'1ª nota: '))
+    nome = input('Nome do aluno: ')
+
+    # Coleta e validação das notas
     while True:
-        if not n1 > 0 and n1 <= 10:
-            print(' nota inválida! Digite uma Nota entre 0 e 10')
-        else:
-            aluno.append(n1)
-            break
-    n2 = float(input(f'2ª nota: '))
+        try:
+            n1 = float(input('1ª nota: '))
+            if 0 <= n1 <= 10:
+                break
+            else:
+                print('Nota inválida! Digite uma nota entre 0 e 10.')
+        except ValueError:
+            print('Entrada inválida! Digite um número.')
+
     while True:
-        if not n2 > 0 and n2 <= 10:
-            print('Nota inválida! Digite uma Nota entre 0 e 10')
-        else:
-            aluno.append(n2)
-            break
-    media = (n1 + n2)/2
-    aluno.append(media)
-    continua = str(input('Deseja continuar? [s/n]')).strip().upper()
-    while continua not in ['S', 'N']:
-        print('Opção inválida! Digite "S" para sim ou "N" para não')
-        continua = str(input('Deseja continuar? [s/n]')).strip().upper()
-        if continua == 'N':
-            break
+        try:
+            n2 = float(input('2ª nota: '))
+            if 0 <= n2 <= 10:
+                break
+            else:
+                print('Nota inválida! Digite uma nota entre 0 e 10.')
+        except ValueError:
+            print('Entrada inválida! Digite um número.')
+
+    media = (n1 + n2) / 2
+    alunos.append([nome, n1, n2, media])
+
+    continua = input('Deseja continuar? [s/n] ').strip().lower()
+    while continua not in ['s', 'n']:
+        print('Opção inválida! Digite "s" para sim ou "n" para não.')
+        continua = input('Deseja continuar? [s/n] ').strip().lower()
+
+    if continua == 'n':
+        break
 
 # Saída de dados
-print('-=-=-=-=-=-=-=-=-' * 3)
-print('no. NOME\t\t MÉDIA')
-print('----------------'* 2)
-for i in range(1, len(alunos)):
-    print(f'{i-1}\t{alunos[i]}\t\t{alunos[i+1]}')
+print('-=' * 20)
+print(f'{"No.":<4}{"NOME":<15}{"MÉDIA":>8}')
+print('-' * 30)
+for i, aluno in enumerate(alunos):
+    print(f'{i:<4}{aluno[0]:<15}{aluno[3]:>8.2f}')
