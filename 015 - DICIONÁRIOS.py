@@ -45,3 +45,14 @@ while len(pessoas):
         pessoa['sexo'] = 'feminino'
         pronome = 'A'
     print(f'{pronome} {pessoa["nome"]} que tem {pessoa["idade"]} é do sexo {pessoa["sexo"]}')
+
+# Método .copy
+estado = dict()
+brasil = list()
+for c in range(3):
+    estado['nome'] = str(input(f'Nome do estado: '))
+    estado['sigla'] = str(input('Sigla do estado:'))
+    brasil.append(estado.copy())
+for e in brasil:
+    for k , v in e.items():
+        print(f'{k}: {v}')
