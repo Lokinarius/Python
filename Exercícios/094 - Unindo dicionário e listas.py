@@ -51,6 +51,7 @@ while True:
             break
     if continua == "n":
             break
+
 # [SAIDA DE DADOS]
 print("==================================")
 print(f"Quantidade de pessoas cadastradas: {pessoas_cadastradas}")
