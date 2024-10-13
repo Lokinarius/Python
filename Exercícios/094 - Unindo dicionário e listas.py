@@ -25,9 +25,18 @@ pessoas_mais_idade_media = []
 while True:
     pessoas = {
         "nome": input("Nome: ").capitalize(),
-        "sexo": input("Sexo (M/F): ").upper(),
-        "idade": int(input("Idade: "))
     }
+
+    # Validação do sexo
+    while True:
+        sexo = input("Sexo (M/F): ").upper()
+        if sexo in ["M", "F"]:
+            pessoas["sexo"] = sexo
+            break
+        else:
+            print("Opção inválida! Digite M para masculino ou F para feminino.")
+
+    pessoas["idade"] = int(input("Idade: "))
 
     # [CRIANDO LISTAS]
     # Pessoas cadastradas
