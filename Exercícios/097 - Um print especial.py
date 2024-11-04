@@ -11,3 +11,10 @@ Saída:
 Olá Mundo!
 ============
 """
+def hello():
+    print("==============")
+    print("Olá Mundo!")
+    print("==============")
+
+# SAIDA
+hello()
