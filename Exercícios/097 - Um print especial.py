@@ -1,20 +1,14 @@
-"""
-097
-Faça um programa que tenha uma função chama escreve(),
-que receba um texto qualquer como parâmetro e mostre uma mensagem
-com tamanho adaptátivel.
 
-Ex: escreva('Olá mundo')
 
-Saída:
-============
-Olá Mundo!
-============
-"""
-def hello():
-    print("==============")
-    print("Olá Mundo!")
-    print("==============")
+def msg(mensagem):
+    tamanho = len(mensagem) + 4
+    print('~*' * (tamanho // 2))
+    print(f' {mensagem} ')
+    print('~*' * (tamanho // 2))
+
+
+# ENTRADA
+mensagem = input('Digite uma mensagem aqui: ')
 
 # SAIDA
-hello()
+msg(mensagem)
