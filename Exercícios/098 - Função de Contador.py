@@ -1,14 +1,4 @@
-"""
-098
-Faça um programa que tenha uma função chamada contador(),
-que receba três parâmetros: inicio, fim e passo e realize a contagem.
-
-Seu programa tem que realizar três contagens através da função criada:
-a) De 1 até 10, de 1 em 1
-b) De 10 até 0, de 2 em 2
-c) Uma contagem personalizada
-"""
-
+from time import sleep
 # CABEÇALHO
 print("================================")
 print("Contador de valores...")
@@ -16,8 +6,17 @@ print("================================")
 
 # FUNÇÃO DE CONTAGEM
 def contador(inicio,fim,passo):
-    for i in range(inicio, fim + 1, passo):
-        print(i)
+    print(f'Contagem de {inicio} até {fim} de {passo} em {passo}')
+    if inicio < fim:
+        for i in range(inicio,fim + 1, passo):
+            print(f'{i}',end =' ')
+            sleep(0.5)
+
+    else:
+        for i in range(inicio, fim - 1, -passo):
+            print(f'{i}',end =' ')
+            sleep(0.5)
+    print("================================")
 
 # SAIDA DE DADOS
 print("Contagem 1: ")
