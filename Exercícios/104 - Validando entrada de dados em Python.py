@@ -6,3 +6,15 @@ Só que fazendo a validação para aceitar apenas um valor numérico.
 EX:
 n= leiaInt('Digite um n')
 """
+
+def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+            return n
+        except ValueError:
+            print('Erro! Digite um número inteiro válido.')
+
+
+
+n = leiaInt('Digite um n')
