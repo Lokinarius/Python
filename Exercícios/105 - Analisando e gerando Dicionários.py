@@ -9,3 +9,4 @@ Faça um programa que tenha função notas() que pode receber várias notas de a
 
  Adicione também as docstrings da função.
 """
+
