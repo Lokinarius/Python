@@ -1,7 +1,19 @@
-"""
-102
-Crie um programa que tenha uma função fatorial() que receba dois
-parâmetros: o primeiro que indique o número a calcular e o outro
-chamado show, que será um valor lógico(opcional)
-indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
-"""
+
+# CABEÇALHO
+print("[FUNÇÃO FATORIAL]")
+print(15*"=")
+
+# FUNÇÃO FATORIAL
+def fatorial():
+    numero = int(input('Digite um número: '))
+    if numero < 0 or numero == 0:
+        print('Número inválido!')
+        return
+    else:
+        fat = 1
+        for c in range(1, numero +1):
+            fat *= c
+    print(f'O número fatorial de {numero} é {fat}')
+
+# Saída
+fatorial()
