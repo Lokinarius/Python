@@ -17,4 +17,4 @@ def leiaInt(msg):
 
 
 
-n = leiaInt('Digite um n')
+n = leiaInt('Digite um número: ')
