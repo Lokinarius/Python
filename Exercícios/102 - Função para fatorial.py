@@ -10,10 +10,15 @@ def fatorial():
         print('Número inválido!')
         return
     else:
-        fat = 1
-        for c in range(1, numero +1):
+        fat =1
+        print(f'Cálculo do fatorial de {numero}: ', end='')
+        for c in range(1, numero + 1):
             fat *= c
-    print(f'O número fatorial de {numero} é {fat}')
+            if c == numero:
+                print(c, end=' = ')
+            else:
+                print(c, end=' x ')
+        print(fat)
 
 # Saída
 fatorial()
