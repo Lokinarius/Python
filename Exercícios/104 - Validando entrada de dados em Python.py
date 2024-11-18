@@ -1,20 +1,19 @@
-"""
-104
-Crie um programa que tenha a função leiaint(), que vai funcionar de forma semelhante à função input() do Python.
-Só que fazendo a validação para aceitar apenas um valor numérico.
-
-EX:
-n= leiaInt('Digite um n')
-"""
-
+# Função
 def leiaInt(msg):
+    ok = False
+    valor = 0
     while True:
-        try:
-            n = int(input(msg))
-            return n
-        except ValueError:
-            print('Erro! Digite um número inteiro válido.')
+        n = str(input(msg))
+        if n.isnumeric():
+            valor = int(n)
+            ok = True
+            break
+        else:
+            print('ERRO! Por favor, digite um número válido.')
+        if ok:
+            break
+    return valor
 
-
-
+# Programa principal
 n = leiaInt('Digite um número: ')
+print(f'Você digitou o número {n}')
