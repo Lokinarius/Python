@@ -1,22 +1,17 @@
+# Função
+def ficha(jogador = '<desconhecido>', gol = 0):
+    print(f'O jogador {jogador} fez {gol} gol(s) no campeonato.')
 
-# CABEÇALHO
-print('Ficha do Jogador')
-print("-="*15)
-
-def ficha(nome='Desconhecido', gols=0):
-    print(f'O jogador {nome} fez {gols} gol(s).')
-
-# Chamada da função
-nome = str(input('Nome do jogador: ')).capitalize()
-gols = input('Quantos gols ele marcou: ')
-
-# Verifica se o valor dos gols foi informado, caso contrário, assume 0
-if gols.isdigit():
-    gols = int(gols)
+# Programa principal
+n = str(input("Nome do Jogador: "))
+g = str(input("Número de gols: "))
+if g.isnumeric():
+    g = int(g)
 else:
-    gols = 0
-
-# Chama a função com os valores informados
-ficha(nome, gols)
+    g = 0
+if n.strip() == '':
+    ficha(gol = g )
+else:
+    ficha(n,g)
 
 
