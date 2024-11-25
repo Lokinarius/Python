@@ -18,5 +18,5 @@ def metade(preco=0):
     return resultado
 
 
-def cambio(preco=0, cambio='R$'):
-    return f'{cambio}{preco:.2f}'.replace('.', ',')
+def cambio(preco=0, moeda='R$'):
+    return f'{moeda}{preco:.2f}'.replace('.', ',')
