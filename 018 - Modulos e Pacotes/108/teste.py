@@ -3,7 +3,7 @@
 
 
 # [Forma from import]
-from moeda import metade, dobro, aumentar, diminuir
+import moeda
 
 p = float(input('Digite o preço: R$'))
 # [ Forma import]
@@ -13,7 +13,7 @@ p = float(input('Digite o preço: R$'))
 # print(f'Reduzindo 15% de R${p} temos R${moeda.diminuir(p, 15)}')
 
 # [Forma from import]
-print(f'A metade de R${p} é {metade(p)}')
-print(f'O dobro de R${p} é {dobro(p)}')
-print(f'Aumentando 10% de R${p} temos {aumentar(p, 10)}')
-print(f'Reduzindo 15% de R${p} temos {diminuir(p, 15)}')
+print(f'A metade de {moeda.cambio(p)} é {moeda.metade(p)}')
+print(f'O dobro de {moeda.cambio(p)} é {moeda.dobro(p)}')
+print(f'Aumentando 10% de {moeda.cambio(p)} temos {moeda.aumentar(p, 10)}')
+print(f'Reduzindo 15% de {moeda.cambio(p)} temos {moeda.diminuir(p, 15)}')
